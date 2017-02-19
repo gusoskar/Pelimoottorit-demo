@@ -18,6 +18,7 @@
   <objects name="objects">
     <object>objects\obj_dude</object>
     <object>objects\obj_ground</object>
+    <object>objects\gittest</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_skyroom</room>

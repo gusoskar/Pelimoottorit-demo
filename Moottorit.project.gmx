@@ -16,12 +16,11 @@
     <path>paths\path0</path>
   </paths>
   <objects name="objects">
-    <object>objects\obj_dude</object>
-    <object>objects\obj_ground</object>
-    <object>objects\gittest</object>
+    <object>objects\obj_wall</object>
+    <object>objects\obj_player</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_skyroom</room>
+    <room>rooms\rm_stage</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

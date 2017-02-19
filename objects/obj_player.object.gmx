@@ -25,12 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Initialize variables
+            <string>///Initialize Variables
 grav = 0.2;
-hsp=0;
-vsp=0;
-jumpSpeed=7;
-moveSpeed=4;
+hsp = 0;
+vsp = 0;
+jumpspeed = 7;
+movespeed = 4;
 </string>
           </argument>
         </arguments>
@@ -54,43 +54,40 @@ moveSpeed=4;
           <argument>
             <kind>1</kind>
             <string>//Get the player's input
-keyRight = keyboard_check(vk_right);
-keyLeft = -keyboard_check(vk_left);
-keyJump = keyboard_check_pressed(vk_space);
+key_right = keyboard_check(vk_right);
+key_left = -keyboard_check(vk_left);
+key_jump = keyboard_check_pressed(vk_space);
 
 //React to inputs
-move = keyLeft + keyRight;
-hsp = move * moveSpeed;
+move = key_left + key_right;
+hsp = move * movespeed;
+if (vsp &lt; 10) vsp += grav;
 
-if(vsp&lt;10){
-    vsp+=grav;
+if (place_meeting(x,y+1,obj_wall))
+{
+    vsp = key_jump * -jumpspeed
 }
 
-if(place_meeting(x,y+1,obj_ground)){
-    vsp+= keyJump * -jumpSpeed;
-}
-
-
-//Horizontal collision
-
-if(place_meeting(x+hsp,y,obj_ground)){
-
-    while(!place_meeting(x+sign(hsp),y,obj_ground)){
+//Horizontal Collision
+if (place_meeting(x+hsp,y,obj_wall))
+{
+    while(!place_meeting(x+sign(hsp),y,obj_wall))
+    {
         x += sign(hsp);
     }
     hsp = 0;
 }
+x += hsp;
 
-//Vertical collision
-if(place_meeting(x+hsp,y,obj_ground)){
-
-    while(!place_meeting(x,y+sign(vsp),obj_ground)){
+//Vertical Collision
+if (place_meeting(x,y+vsp,obj_wall))
+{
+    while(!place_meeting(x,y+sign(vsp),obj_wall))
+    {
         y += sign(vsp);
     }
     vsp = 0;
 }
-
-x += hsp;
 y += vsp;
 </string>
           </argument>
@@ -109,5 +106,8 @@ y += vsp;
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints/>
+  <PhysicsShapePoints>
+    <point>16,16</point>
+    <point>16,16</point>
+  </PhysicsShapePoints>
 </object>

@@ -61,16 +61,14 @@ hsp = move * movespeed;
 
 
 //Horizontal Collision
-if (place_meeting(x+hsp,y,obj_wall) || place_meeting(x+hsp,y,obj_enemy))
+/*if (place_meeting(x+hsp,y,obj_wall) || place_meeting(x+hsp,y,obj_enemy))
 {
-    while(!place_meeting(x+sign(hsp),y,obj_wall))
-    {
+
         instance_destroy();
-    }
     hsp = 0;
 }
 
-
+*/
 x += hsp;
 
 </string>

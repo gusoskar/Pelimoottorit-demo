@@ -23,6 +23,7 @@
     <object>objects\obj_player</object>
     <object>objects\obj_fireball</object>
     <object>objects\obj_enemy</object>
+    <object>objects\obj_test</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_stage</room>

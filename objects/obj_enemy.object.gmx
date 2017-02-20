@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///Initialize Variables
+hp = 3;
 grav = 0.2;
 hsp = 0;
 vsp = 0;
@@ -53,7 +54,8 @@ movespeed = 4;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>IncomingFireball = instance_place(x,y,obj_fireball);
+            <string>//When fireball hits enemy, destroy them both
+IncomingFireball = instance_place(x,y,obj_fireball);
 
 if(instance_exists(IncomingFireball)){
 
@@ -61,7 +63,11 @@ with IncomingFireball{
     instance_destroy();
 }
 
-instance_destroy();
+hp -= 1;
+
+if(hp &lt;= 0 ){
+    instance_destroy();
+}
 }
 
 </string>

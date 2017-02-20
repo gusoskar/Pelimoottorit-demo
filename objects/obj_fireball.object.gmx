@@ -56,7 +56,7 @@ movespeed = 4;
             <kind>1</kind>
             <string>
 //React to inputs
-move = 1;
+move = 2;
 hsp = move * movespeed;
 
 

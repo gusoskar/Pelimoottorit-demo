@@ -6,11 +6,16 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_dude</sprite>
     <sprite>sprites\spr_grass</sprite>
     <sprite>sprites\spr_fireball</sprite>
     <sprite>sprites\spr_enemy</sprite>
-    <sprite>sprites\spr_player</sprite>
+    <sprite>sprites\spr_wizard_idle</sprite>
+    <sprite>sprites\spr_wizard_walk</sprite>
+    <sprite>sprites\spr_wizard_attack</sprite>
+    <sprite>sprites\spr_plainground</sprite>
+    <sprite>sprites\spr_wizard_jump</sprite>
+    <sprite>sprites\spr_wizard_jump_air</sprite>
+    <sprite>sprites\spr_wizard_run</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
@@ -23,7 +28,6 @@
     <object>objects\obj_player</object>
     <object>objects\obj_fireball</object>
     <object>objects\obj_enemy</object>
-    <object>objects\obj_test</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_stage</room>

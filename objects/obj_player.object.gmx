@@ -29,7 +29,7 @@
 grav = 0.25;
 hsp = 0;
 vsp = 0;
-jumpspeed = 7;
+jumpspeed = 10;
 movespeed = 4;
 image_speed=0.05;
 </string>
@@ -103,8 +103,8 @@ if(move != 0){
     image_xscale = move;
 }
 
+//if(place_meeting(x,y+1,obj_wall) &amp;&amp; sprite_index!=spr_wizard_attack){
 if(place_meeting(x,y+1,obj_wall)){
-    
     if(move != 0){
         sprite_index=spr_wizard_run;
     }
@@ -143,6 +143,9 @@ else{
           <argument>
             <kind>1</kind>
             <string>var inst;
+
+//sprite_index = spr_wizard_attack;
+
 
 if(image_xscale &lt; 0){
     inst = instance_create(x, y, obj_fireball);

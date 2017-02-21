@@ -31,7 +31,7 @@ grav = 0.25;
 hsp = 0;
 vsp = 0;
 jumpspeed = 7;
-movespeed = 4;
+movespeed = 1;
 image_speed=0.1;
 </string>
           </argument>
@@ -71,31 +71,64 @@ if(instance_exists(IncomingFireball)){
     }
 }
 
+
+//React to inputs
+move = -1;
+hsp = move * movespeed;
+
+if (vsp &lt; 10) {
+    vsp += grav;
+}
+
+/*if (place_meeting(x,y+1,obj_wall))
+{
+    vsp = key_jump * -jumpspeed
+}*/
+
+//Horizontal Collision
+if (place_meeting(x+hsp,y,obj_wall))
+{
+    while(!place_meeting(x+sign(hsp),y,obj_wall))
+    {
+        x += sign(hsp);
+    }
+    hsp = 0;
+}
+x += hsp;
+
+//Vertical Collision
+if (place_meeting(x,y+vsp,obj_wall))
+{
+    while(!place_meeting(x,y+sign(vsp),obj_wall))
+    {
+        y += sign(vsp);
+    }
+    vsp = 0;
+}
+y += vsp;
+
+
+
+
+//Animation
+
+if(move != 0){
+    image_xscale = move;
+}
+/*
+if(place_meeting(x,y+1,obj_wall)){
+    
+    if(move != 0){
+        sprite_index=spr_enemy_run;
+    }
+    else{
+        sprite_index=spr_enemy_idle;
+    }
+}
+*/
+
+
 </string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>301</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_alarm</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
           </argument>
         </arguments>
       </action>

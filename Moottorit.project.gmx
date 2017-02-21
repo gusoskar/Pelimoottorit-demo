@@ -9,13 +9,15 @@
     <sprite>sprites\spr_grass</sprite>
     <sprite>sprites\spr_fireball</sprite>
     <sprite>sprites\spr_enemy_idle</sprite>
-    <sprite>sprites\spr_wizard_idle</sprite>
-    <sprite>sprites\spr_wizard_walk</sprite>
-    <sprite>sprites\spr_wizard_attack</sprite>
+    <sprite>sprites\spr_enemy_run</sprite>
     <sprite>sprites\spr_plainground</sprite>
-    <sprite>sprites\spr_wizard_jump</sprite>
-    <sprite>sprites\spr_wizard_jump_air</sprite>
-    <sprite>sprites\spr_wizard_run</sprite>
+    <sprites name="player">
+      <sprite>sprites\spr_wizard_run</sprite>
+      <sprite>sprites\spr_wizard_jump_air</sprite>
+      <sprite>sprites\spr_wizard_jump</sprite>
+      <sprite>sprites\spr_wizard_attack</sprite>
+      <sprite>sprites\spr_wizard_idle</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>

@@ -31,7 +31,7 @@ vsp = 0;
 grav = 0;
 move = 2;
 jumpspeed = 7;
-movespeed = 4;
+movespeed = 7;
 
 </string>
           </argument>
@@ -60,14 +60,10 @@ movespeed = 4;
 hsp = move * movespeed;
 
 //Horizontal Collision
-/*if (place_meeting(x+hsp,y,obj_wall) || place_meeting(x+hsp,y,obj_enemy))
+if (place_meeting(x+hsp,y,obj_wall))
 {
-
-        instance_destroy();
-    hsp = 0;
+    instance_destroy();
 }
-
-*/
 x += hsp;
 
 </string>

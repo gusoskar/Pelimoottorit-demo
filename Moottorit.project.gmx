@@ -6,11 +6,6 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_grass</sprite>
-    <sprite>sprites\spr_fireball</sprite>
-    <sprite>sprites\spr_enemy_idle</sprite>
-    <sprite>sprites\spr_enemy_run</sprite>
-    <sprite>sprites\spr_plainground</sprite>
     <sprites name="player">
       <sprite>sprites\spr_wizard_run</sprite>
       <sprite>sprites\spr_wizard_jump_air</sprite>
@@ -18,6 +13,16 @@
       <sprite>sprites\spr_wizard_attack</sprite>
       <sprite>sprites\spr_wizard_idle</sprite>
     </sprites>
+    <sprites name="enemy">
+      <sprite>sprites\spr_enemy_death</sprite>
+      <sprite>sprites\spr_enemy_run</sprite>
+      <sprite>sprites\spr_enemy_idle</sprite>
+    </sprites>
+    <sprite>sprites\spr_grass</sprite>
+    <sprite>sprites\spr_plainground</sprite>
+    <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_fireball</sprite>
+    <sprite>sprites\spr_health</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background1</background>
@@ -27,10 +32,12 @@
     <path>paths\path1</path>
   </paths>
   <objects name="objects">
-    <object>objects\obj_wall</object>
+    <object>objects\obj_ground</object>
     <object>objects\obj_player</object>
     <object>objects\obj_fireball</object>
     <object>objects\obj_enemy</object>
+    <object>objects\obj_wall</object>
+    <object>objects\obj_health</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_stage</room>

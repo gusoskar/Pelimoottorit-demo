@@ -38,6 +38,8 @@
     <object>objects\obj_enemy</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_health</object>
+    <object>objects\obj_spawn</object>
+    <object>objects\obj_spawn2</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_stage</room>

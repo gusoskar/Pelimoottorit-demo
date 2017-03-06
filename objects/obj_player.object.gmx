@@ -26,12 +26,12 @@
           <argument>
             <kind>1</kind>
             <string>///Initialize Variables
-grav = 0.25;
+grav = 0.4;
 hp=100;
 hsp = 0;
 vsp = 0;
-jumpspeed = 10;
-movespeed = 6;
+jumpspeed = 12;
+movespeed = 7;
 image_speed=0.05;
 </string>
           </argument>
@@ -80,7 +80,7 @@ image_speed=0.05;
             <string>//Get the player's input
 key_right = keyboard_check(vk_right);
 key_left = -keyboard_check(vk_left);
-key_jump = keyboard_check_pressed(vk_space);
+key_jump = keyboard_check_pressed(vk_shift);
 
 //React to inputs
 move = key_left + key_right;
